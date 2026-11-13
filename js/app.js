@@ -5,7 +5,7 @@ import { renderSettings } from './settings.js';
 import { setAppVersion, maybeAskBackup } from './backup.js';
 import { todayStr } from './logic.js';
 import { el } from './ui.js';
-export const APP_VERSION = '3.0.0';
+export const APP_VERSION = '3.0.1';
 const main = document.getElementById('main');
 const tabs = [...document.querySelectorAll('.topnav button')];
 const info = { version: APP_VERSION, persisted: null };

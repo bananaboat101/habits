@@ -64,11 +64,6 @@ function rangeTitle(r) {
   if (r.mode === 'M') return `${MONTHS[r.m - 1]} ${r.y}`;
   return String(r.y);
 }
-function diffText(amt, cur, prev) {
-  const d = amt ? Math.round((cur - prev) / 10) * 10 : cur - prev;
-  if (d === 0) return '±0';
-  return (d > 0 ? '+' : '−') + (amt ? L.fmtH(Math.abs(d)) : String(Math.abs(d)));
-}
 function card(slot, range, prev, today, root) {
   const hb = habit(slot);
   const cfg = state.settings;
@@ -76,14 +71,14 @@ function card(slot, range, prev, today, root) {
   const h = L.headline(state.map, cfg, slot, range, today);
   const hp = L.headline(state.map, cfg, slot, prev, today);
   const fmtValue = (v) => (amt ? (v === null ? '–' : `Ø ${L.fmtH(Math.round(v))}`) : String(v));
-  const hasPrev = prev.end >= cfg.startDay && hp.value !== null && h.value !== null;
+  const hasPrev = prev.end >= cfg.startDay && hp.value !== null;
   const big = fmtValue(h.value);
   const bs = L.bars(state.map, cfg, slot, range, today);
   const sel = view.sel[slot];
   const selBar = bs.find((b) => b.key === sel);
   const side = selBar
     ? el('span', { class: 'bar-info num', 'aria-live': 'polite', text: barText(slot, selBar) })
-    : (hasPrev ? el('span', { class: 'compare num', 'aria-label': 'Change from previous period', text: diffText(amt, h.value, hp.value) }) : null);
+    : (hasPrev ? el('span', { class: 'compare num', 'aria-label': `Previous period value ${fmtValue(hp.value)}`, text: fmtValue(hp.value) }) : null);
   const node = el('section', { class: 'card stat-card', 'aria-label': hb.shortName },
     el('div', { class: 'headline' },
       el('span', { class: 'habit-name', text: hb.shortName }),
