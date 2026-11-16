@@ -1,4 +1,4 @@
-const VERSION = 'habits-3.1.0';
+const VERSION = 'habits-3.1.1';
 const FILES = [
   './',
   'index.html',

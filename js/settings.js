@@ -128,7 +128,7 @@ function habitCard(slot, root, info) {
 function reminderCard() {
   return el('section', { class: 'card' },
     el('div', { class: 'section-title', text: t('reminder') }),
-    el('p', { class: 'hint', text: t('reminderHint') }));
+    el('p', { class: 'hint lines', text: t('reminderHint') }));
 }
 function dataCard(root, info) {
   const fileInput = el('input', {

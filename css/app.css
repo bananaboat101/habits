@@ -49,6 +49,7 @@ html.noscroll, html.noscroll body { overflow: hidden; height: 100%; }
 .hint, .field-lbl, .footnote { color: var(--text2); font-size: 0.82rem; }
 .section-title { font-weight: 600; margin-bottom: 0.4rem; }
 .hint { margin: 0.4rem 0 0.6rem; line-height: 1.35; }
+.hint.lines { white-space: pre-line; }
 .footnote { text-align: center; margin: 1.5rem 0 0; line-height: 1.4; }
 .footnote-warn { display: block; margin-top: 0.6rem; }
 .namaste {
@@ -209,6 +210,7 @@ html.noscroll, html.noscroll body { overflow: hidden; height: 100%; }
 .field input:focus { border-bottom: 1px solid var(--text2); }
 .field input[type="text"] { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .field input[type="date"] { color-scheme: dark; display: flex; justify-content: flex-end; }
+.field input[type="date"]::-webkit-date-and-time-value { text-align: right; }
 .btn {
   border: 0; border-radius: 10px; background: #1C1C1E; padding: 0.7rem 1rem; font-weight: 500; cursor: pointer;
 }
