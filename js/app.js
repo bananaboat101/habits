@@ -6,7 +6,7 @@ import { setAppVersion, maybeAskBackup, maybeShowInstallHint } from './backup.js
 import { todayStr } from './logic.js';
 import { el } from './ui.js';
 import { t, getLang } from './i18n.js';
-export const APP_VERSION = '3.1.1';
+export const APP_VERSION = '3.1.2';
 const main = document.getElementById('main');
 const tabs = [...document.querySelectorAll('.topnav button')];
 const info = { version: APP_VERSION, persisted: null, onLanguage: () => render() };

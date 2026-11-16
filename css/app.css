@@ -124,9 +124,10 @@ html.noscroll, html.noscroll body { overflow: hidden; height: 100%; }
 .quick-tile.amt.bad .gauge i.on { background: var(--missed); }
 .day-note { text-align: center; color: var(--text2); font-size: 0.78rem; margin: 0.2rem 0; }
 .missing-note {
-  display: block; width: 100%; border: 0; background: none; cursor: pointer; padding: 0.3rem 0;
-  text-align: center; color: var(--text); font-size: 0.85rem; font-weight: 500; margin: -0.4rem 0 0.1rem;
+  display: block; width: 100%; border: 0; border-radius: 10px; background: #1C1C1E; cursor: pointer; padding: 0.6rem 1rem;
+  text-align: center; color: var(--text); font-size: 0.85rem; font-weight: 500; margin: -0.2rem 0 0.2rem;
 }
+.missing-note:active { background: var(--line); }
 .dialog.picker { width: min(24rem, 100%); }
 .preset-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.55rem; margin-bottom: 0.8rem; }
 .btn.preset { aspect-ratio: 1; padding: 0; border-radius: 14px; font-size: 1.3rem; font-variant-numeric: tabular-nums; background: #2C2C2E; }
