@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self' data: blob:; style-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Habits">
+  <title>Habits</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/app.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <nav class="topnav" role="tablist" aria-label="Sections">
+    <button data-tab="now" role="tab" class="tn-text">Now</button>
+    <button data-tab="history" role="tab" class="tn-text">History</button>
+    <button data-tab="settings" role="tab" class="tn-gear" aria-label="Settings" title="Settings">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.60 9.98 L21.28 10.53 L21.28 13.47 L18.60 14.02 L18.09 15.24 L19.60 17.53 L17.53 19.60 L15.24 18.09 L14.02 18.60 L13.47 21.28 L10.53 21.28 L9.98 18.60 L8.76 18.09 L6.47 19.60 L4.40 17.53 L5.91 15.24 L5.40 14.02 L2.72 13.47 L2.72 10.53 L5.40 9.98 L5.91 8.76 L4.40 6.47 L6.47 4.40 L8.76 5.91 L9.98 5.40 L10.53 2.72 L13.47 2.72 L14.02 5.40 L15.24 5.91 L17.53 4.40 L19.60 6.47 L18.09 8.76 Z"/><circle cx="12" cy="12" r="3.2"/></svg>
+    </button>
+  </nav>
+  <main id="main" tabindex="-1"></main>
+</body>
+</html>
